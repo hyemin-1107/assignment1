@@ -8,7 +8,11 @@
 
 
 const isValid = s => {
+	// 조건문이 참일 때 실행되는 반복문
+	// Include() 메서드는 문자열에 다른 문자열이 포함되어 있는지 여부를 확인
+	// true를 반환하고 그렇지 않으면 false를 반환
 	while (s.include("()") || s.includes("()") || s.includes("()")) {
+		// replace 문자열 내의 특정 문자열을 치환
 		s = s.replace("()", "");
 		s = s.replace("{}", "");
 		s = s.replace("[]", "");
